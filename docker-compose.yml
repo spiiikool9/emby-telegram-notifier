@@ -1,8 +1,8 @@
 version: '3'
 services:
   emby-telegram-notifier:
-    container_name: emby-telegram-notifier
-    image: fahmula/emby-telegram-notifier
+    container_name: emby-telegram-notifier-2
+    image: spiiikool9/emby-telegram-notifier
     restart: unless-stopped
     ports:
       - "5000:5000"
