@@ -277,7 +277,7 @@ def process_payload(item_id):
                 f"(Season) {series_name_cleaned} "
                 f"Season {season_num} notification sent to Telegram!"
             )
-            return "New Season Added"
+            return "Nueva Temporada añadida"
 
         elif not item_already_notified(
             series_name_cleaned, episode_stored
@@ -286,8 +286,8 @@ def process_payload(item_id):
         ):
             if is_within_last_x_days(premiere_date, EPISODE_PREMIERED_WITHIN_X_DAYS):
                 notification_message = (
-                    f"*New Episode Added*\n\n*Release Date*: {premiere_date}\n\n*Series*: {series_name_cleaned} *S*"
-                    f"{season_num}*E*{season_epi}\n*Episode Title*: {item_name}\n\n{overview}\n\n"
+                    f"*Nuevo Episodio añadido*\n\n*Fecha de estreno*: {premiere_date}\n\n*Series*: {series_name_cleaned} *S*"
+                    f"{season_num}*E*{season_epi}\n*Titulo del episodio*: {item_name}\n\n{overview}\n\n"
                 )
 
                 mark_item_as_notified(series_name_cleaned, episode_stored)
