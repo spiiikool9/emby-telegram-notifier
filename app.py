@@ -223,8 +223,8 @@ def process_payload(item_id):
                 )
 
             notification_message = (
-                f"*🍿New Movie Added🍿*\n\n*{movie_name_cleaned}* *({release_year})*\n\n{overview}\n\n"
-                f"Runtime\n{runtime}"
+                f"*🍿Nueva Pelicula añadida🍿*\n\n*{movie_name_cleaned}* *({release_year})*\n\n{overview}\n\n"
+                f"Duracion\n{runtime}"
             )
 
             if trailer_url != "Unknown":
@@ -265,8 +265,8 @@ def process_payload(item_id):
             )
 
             notification_message = (
-                f"*New Season Added*\n\n*{series_name_cleaned}* *({release_year})*\n\n"
-                f"*Season* *{season_num}*\n\n{overview_to_use}\n\n"
+                f"*Nueva Temporada añadida*\n\n*{series_name_cleaned}* *({release_year})*\n\n"
+                f"*Temporada* *{season_num}*\n\n{overview_to_use}\n\n"
             )
 
             mark_item_as_notified(series_name_cleaned, season_name)
